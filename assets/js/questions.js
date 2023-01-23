@@ -1,27 +1,27 @@
 // Start the quiz
 // Get question
 // End quiz
-var questionOne = "what's my name?"; 
 
 var questionOption = [
-    {
-        question: "What's my name?",
-        choice1: "Claire",
-        choice2: "Annabelle",
-        choice3: "Lily",
-        choice4: "Noah",
-        answer: "e",
+ {
+        question: "String values must be enclosed within _____ when being assigned to variables.",
+        choice1: "commas",
+        choice2: "curly brackets",
+        choice3: "quotes",
+        choice4: "square brackets",
+        answer: "quotes",
 
     },
     {   
-        question: "",
+        question: "Which is not a commonly used data type?",
+        choice1: "number",
+        choice2: "boolean",
+        choice3: "string",
+        choice4: "prompt",
+        answer: "prompt",
 
 
-    },
-    {   
-        question: "",
-
-    },
+    }
 
 
 ]
