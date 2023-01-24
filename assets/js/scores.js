@@ -8,6 +8,7 @@ var highScores = document.querySelector("#highscores");
 
 let displayScores = JSON.parse(localStorage.getItem('highscores'));
 
+highScores.textContent = displayScores;
 
 
 // want to limit number of highscores displayed
