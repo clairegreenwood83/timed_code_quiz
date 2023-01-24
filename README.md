@@ -31,10 +31,15 @@ The following animation demonstrates what the functionality of how the final app
 ## Deployment
 
 - The quiz can be accessed via this link
-- To start the quiz click on the "start quiz" button.
+- To start the quiz the user should click on the "start quiz" button.
 - The timer will then start and the first question appears.
-- Read the question and click on the answer button you think correlates to the correct answer. 
-- The next question will load along with a comment as to whether your previous answer was 
+- The user should click on the answer button they think is correct.
+- The next question will load along with a comment as to whether the previous answer was correct or incorrect.
+- If the answer is incorrect, 10 seconds will be deducted from the timer. 
+- The quiz will end when the user has answered all of the questions presented to them or when the timer gets to 0. 
+- Following the end of the quiz, the user will be presented with their score and an option to input their initials and save their   score. 
+- The score can be viewed by following the highscore link in the top left-hand corner of the browser. 
+- Users scores are stored in the internal storage and are therefore saved to the browser, even if the user exits the page. 
 
 
 The web browser looks as shown below:
@@ -42,6 +47,7 @@ The web browser looks as shown below:
 
 
 ## Technology Stack
+
 The following technology was utilised:
 
 - JavaScript
