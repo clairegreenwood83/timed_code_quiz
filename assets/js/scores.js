@@ -8,7 +8,22 @@ var highScores = document.querySelector("#highscores");
 
 let displayScores = JSON.parse(localStorage.getItem('highscores'));
 
-highScores.textContent = displayScores;
+display();
+
+function display() {
+    for (var i = 0; i < displayScores.length; i++) {
+        var display = displayScores[i];
+
+        var li = document.createElement("li");
+        li.textContent = (display.initials) + " " + (display.score);
+        highScores.appendChild(li);
+      }
+}
+
+
+
+//highScores = displayScores.value;
+
 
 
 // want to limit number of highscores displayed
@@ -20,7 +35,7 @@ highScores.textContent = displayScores;
 
 // when user clicks on clear button it clears highscore results
 function clearScore() {
-    highScores.style.display = "";
+    highScores.innerHTML = "";
 }
 
 clear.addEventListener("click", clearScore);
