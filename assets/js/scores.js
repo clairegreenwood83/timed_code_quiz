@@ -1,22 +1,12 @@
+// clear button 
 var clear = document.querySelector("#clear");
-
+// list where scores are displayed in browser
 var highScores = document.querySelector("#highscores");
 
-// want to get initials and scores from local storage
+
+// want to get initials and scores from local storage to display in browser
 
 let displayScores = JSON.parse(localStorage.getItem('highscores'));
-
-
-// highScores = displayScores
-
-
- /*function displayScores() {
-    
-
-}
-
-window.onload = displayScores */
-
 
 
 
