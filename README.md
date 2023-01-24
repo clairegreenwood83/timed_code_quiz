@@ -30,7 +30,7 @@ The following animation demonstrates what the functionality of how the final app
 
 ## Deployment
 
-- The quiz can be accessed via this link
+- The quiz can be accessed via this [!link] https://clairegreenwood83.github.io/timed_code_quiz/index.html]
 - To start the quiz the user should click on the "start quiz" button.
 - The timer will then start and the first question appears.
 - The user should click on the answer button they think is correct.
