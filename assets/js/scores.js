@@ -20,22 +20,14 @@ function display() {
       }
 }
 
-
-
-//highScores = displayScores.value;
-
-
-
-// want to limit number of highscores displayed
-
-
-// want to sort items so highest score is displayed first
-
-
-
 // when user clicks on clear button it clears highscore results
 function clearScore() {
     highScores.innerHTML = "";
 }
 
 clear.addEventListener("click", clearScore);
+
+
+// To do:
+// want to limit number of highscores displayed
+// want to sort items so highest score is displayed first

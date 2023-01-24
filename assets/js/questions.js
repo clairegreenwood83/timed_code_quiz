@@ -20,7 +20,7 @@ var questionOption = [
         answer: "4",
     },
     {
-        question: "In JavaScript arrays can be used to store _______.",
+        question: "In JavaScript arrays can be used to store _______",
         choice1: "numbers",
         choice2: "other arrays",
         choice3: "booleans",

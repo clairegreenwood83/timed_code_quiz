@@ -35,8 +35,8 @@ var timeLeft = 60;
 var questionNumber = 0;
 var timerInterval;
 
-// function to set up timer
 
+// function to set up timer
 
 function countdown() {
     timerInterval = setInterval(function() {
@@ -50,6 +50,7 @@ function countdown() {
 }
 
 // set up button that starts timer when clicked
+
 startButton.addEventListener("click", countdown);
 
 
@@ -79,7 +80,6 @@ function showQuestion (n) {
 
 function checkAnswer(event) {
     event.preventDefault();
-    //console.log(event.target);
 
     if (questionOption[questionNumber].answer == event.target.value) {
         result.textContent = "Correct!";
@@ -99,28 +99,24 @@ choicesBtn.addEventListener("click", checkAnswer);
 
 
 // function for the end of the game
-
+// when timer gets to 0 or all questions answered final score displayed and option to save initials and score
 function gameOver() {
-    //stopTimer();
+
     timer.textContent = 0;
     questionsScreen.style.display = "";
     endScreen.style.display = "block";
     clearInterval(timerInterval);
 
-
     finalScore.textContent = timeLeft;
     
 }
 
-
-// when timer gets to 0 or all questions answered final score displayed and option to save initials and score
-
 // function to allow user to save score and initials  
 
-
+// put into local storage client and score so can be accessed by scores.js and highscores.html
 
 function highScores() {
-    //link to highscores html here
+
     var highscores = JSON.parse(localStorage.getItem("highscores")) || [];
     var result = {
         initials: initials.value,
@@ -128,15 +124,13 @@ function highScores() {
     }
     highscores.push(result)
     localStorage.setItem("highscores", JSON.stringify(highscores)) 
-    window.location.assign("./highscores.html")
-    //when user clicks on submit button it takes them to the highscore html?
+    window.location.assign("./highscores.html")    // link to highscores html
+
+   
 }
 
-submit.addEventListener("click", highScores);
+submit.addEventListener("click", highScores);  // when user clicks on submit button it takes them to the highscore html
 
 
-//when user clicks on clear button on highscore page it clears the results and intials
 
-
-// put into local storage client and score
  
