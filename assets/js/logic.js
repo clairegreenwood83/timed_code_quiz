@@ -13,30 +13,29 @@ var answerBtn3 = document.querySelector("#answer_button3");
 var answerBtn4 = document.querySelector("#answer_button4");
 var choicesBtn = document.querySelector(".choices");
 var result = document.querySelector("#check_answer");
+var finalScore = document.querySelector("final-score");
 
 var timeLeft = 60;
 var questionNumber = 0;
 
 // function to set up timer
+
 function countdown() {
     var timerInterval = setInterval(function() {
             timeLeft--;
             timer.textContent = timeLeft;
-        if (timeLeft === 0) {
-            clearInterval(timerInterval);
-            //sendMessage(); When game ends score should be displayed and initials and score saved
-        }
-
-    }, 1000);
-}
-
-// function to send message when game ends
-function sendMessage() {
-
+       if (timeLeft === 0) {
+           clearInterval(timerInterval);
+        } else if 
+            (questionNumber >= questionOption.length + 1) {
+                clearInterval(timerInterval);
+            }
+     }, 1000);
 }
 
 // set up button that starts timer when clicked
 startButton.addEventListener("click", countdown);
+
 
 // start-screen ID is where start button is. Need to hide this when first question appears.
 
@@ -63,26 +62,37 @@ choicesBtn.addEventListener("click", checkAnswer);
     
 function checkAnswer(event) {
     event.preventDefault();
+    //console.log(event.target);
+
+    if (questionOption[questionNumber].answer == event.target.value) {
+        result.textContent = "Correct!";
+    } else {
+        timeLeft = timeLeft - 10;
+        result.textContent = "Incorrect!";
+    }
 
     if (questionNumber < questionOption.length - 1) {
         showQuestion(questionNumber + 1);
-} 
-
-    if (questionOption(questionNumber).answer === event.target.value) {
-        result.textContent = "Correct!";
+    } else {
+        gameOver();
     }
-
-  
 }
+
+// function for the end of the game
+
+function gameOver() {
+    //stopTimer();
+    timer.textContent = 0;
+    questionsScreen.style.display = "";
+    endScreen.style.display = "block";
+
+    let finalScore = timeLeft;
+    finalScore.textContent = timeLeft;
     
-// function so that click produces questions
+}
 
 
 
-// function checkAnswer(event) {
-//     event.preventDefault();
-// }
 
-// check answer to see if it's correct, if not take away from timer/score
-// if answer is correct next question displays
 // when timer gets to 0 or all questions answered final score displayed and option to save initials and score
+// function to put score and initials into scoreboard 
