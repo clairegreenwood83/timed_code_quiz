@@ -23,12 +23,19 @@ The instructions for the task were as follows:
       - The quiz should end when all questions are answered or the timer reaches 0.
       - When the game ends, it should display their score and give the user the ability to save their initials and their score.
     
-The following animation demonstrates the application functionality:
+The following animation demonstrates what the functionality of how the final application should be:
     
 ![08-web-apis-challenge-demo](https://user-images.githubusercontent.com/118351853/214394657-433c39fa-2404-4920-8fa0-3ac439b9cb5f.gif)
 
 
 ## Deployment
+
+- The quiz can be accessed via this link
+- To start the quiz click on the "start quiz" button.
+- The timer will then start and the first question appears.
+- Read the question and click on the answer button you think correlates to the correct answer. 
+- The next question will load along with a comment as to whether your previous answer was 
+
 
 The web browser looks as shown below:
 
